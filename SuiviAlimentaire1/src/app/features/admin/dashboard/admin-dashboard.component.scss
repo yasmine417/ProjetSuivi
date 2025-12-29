@@ -1,0 +1,50 @@
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.min-h-screen {
+  animation: fadeIn 0.5s ease-out;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Custom scrollbar for modal
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea #f3f4f6;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #9333ea;
+    border-radius: 10px;
+
+    &:hover {
+      background: #7e22ce;
+    }
+  }
+}

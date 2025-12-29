@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="discovery" />
+        <module name="gateway" />
+      </profile>
+      <profile name="Annotation profile for OCRIngestion" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="OCRIngestion" />
+        <module name="historique-nutritionnel-service" />
+        <module name="GestionAliments" />
+        <module name="Authentication" />
+        <module name="IACalories" />
+        <module name="HistoriqueNutritionnel" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Authentication" options="-parameters" />
+      <module name="GestionAliments" options="-parameters" />
+      <module name="HistoriqueNutritionnel" options="-parameters" />
+      <module name="IACalories" options="-parameters" />
+      <module name="NutritionRecommendationService" options="-parameters" />
+      <module name="OCRIngestion" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="historique-nutritionnel-service" options="-parameters" />
+    </option>
+  </component>
+</project>
